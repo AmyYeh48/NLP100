@@ -3,8 +3,8 @@
 query = "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."
 
 
-def sort_by_alphabet(input_str):
-    return sorted(input_str.strip().lower().split(' '))
+def count_alphabet(input_str):
+    return [len(word.rstrip(',.')) for word in input_str.strip().split(' ')]
 
 if __name__ == '__main__':
-    print sort_by_alphabet(query)
+    print count_alphabet(query)
