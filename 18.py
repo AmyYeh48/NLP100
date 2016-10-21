@@ -4,7 +4,7 @@ import fileinput
 
 data_list = []
 for line in fileinput.input():
-        data_list.append(tuple(line.strip().split('\t')))
+        data_list.append(line.strip().split('\t'))
 for res in sorted(data_list, key= lambda x: float(x[2]), reverse=True):
     print '\t'.join(res)
 
